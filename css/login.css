@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: Raleway, sans-serif;
+}
+
+body {
+	background: linear-gradient(90deg, #C7C5F4, #776BCC);
+}
+
+.inicioLogin {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 85vh;
+}
+
+.estado {
+	font-weight: bold;
+}
+
+.screen {
+	background: linear-gradient(90deg, #5D54A4, #7C78B8);
+	position: relative;
+	height: 600px;
+	width: 360px;
+	box-shadow: 0px 0px 24px #5C5696;
+}
+
+.screen__content {
+	z-index: 1;
+	position: relative;
+	height: 100%;
+}
+
+.screen__background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 0;
+	-webkit-clip-path: inset(0 0 0 0);
+	clip-path: inset(0 0 0 0);
+}
+
+.screen__background__shape {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.screen__background__shape1 {
+	height: 520px;
+	width: 520px;
+	background: #FFF;
+	top: -50px;
+	right: 120px;
+	border-radius: 0 72px 0 0;
+}
+
+.screen__background__shape2 {
+	height: 220px;
+	width: 220px;
+	background: #6C63AC;
+	top: -172px;
+	right: 0;
+	border-radius: 32px;
+}
+
+.screen__background__shape3 {
+	height: 540px;
+	width: 190px;
+	background: linear-gradient(270deg, #5D54A4, #6A679E);
+	top: -24px;
+	right: 0;
+	border-radius: 32px;
+}
+
+.screen__background__shape4 {
+	height: 400px;
+	width: 200px;
+	background: #7E7BB9;
+	top: 420px;
+	right: 50px;
+	border-radius: 60px;
+}
+
+.login {
+	width: 320px;
+	padding: 30px;
+	padding-top: 50px;
+}
+
+.login__field {
+	padding: 20px 0px;
+	position: relative;
+}
+
+.login__icon {
+	position: absolute;
+	top: 30px;
+	color: #7875B5;
+}
+
+.login__input {
+	border: none;
+	border-bottom: 2px solid #D1D1D4;
+	background: none;
+	padding: 10px;
+	padding-left: 24px;
+	width: 75%;
+	transition: .2s;
+	font-size: 15px;
+}
+
+.login__input:active,
+.login__input:focus,
+.login__input:hover {
+	outline: none;
+	border-bottom-color: #6A679E;
+}
+
+.login__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 30px;
+	padding: 16px 20px;
+	border-radius: 26px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	color: #4C489D;
+	box-shadow: 0px 2px 2px #5C5696;
+	cursor: pointer;
+	transition: .2s;
+}
+
+.login__submit:active,
+.login__submit:focus,
+.login__submit:hover {
+	border-color: #6A679E;
+	outline: none;
+}
+
+.button__icon {
+	font-size: 24px;
+	margin-left: auto;
+	color: #7875B5;
+}
+
+.social-login {
+	position: absolute;
+	height: 140px;
+	width: 160px;
+	text-align: center;
+	bottom: 0px;
+	right: 0px;
+	color: #fff;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-login__icon {
+	padding: 20px 10px;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0px 0px 8px #7875B5;
+}
+
+.social-login__icon:hover {
+	transform: scale(1.5);
+}
+
+/* By Dominik Biedebach @domobch */
+
+small {
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.center {
+	text-align: center;
+}
+
+/* By Dominik Biedebach @domobch */
+
+section {
+	height: 100vh;
+}
+
+/* NAVIGATION */
+nav {
+	width: 80%;
+	margin: 0 auto;
+	background: #fff;
+	padding: 50px 0;
+	box-shadow: 0px 5px 0px #dedede;
+}
+
+/* By Dominik Biedebach @domobch */
+nav ul {
+	list-style: none;
+	text-align: center;
+}
+
+nav ul li {
+	display: inline-block;
+}
+
+nav ul li a {
+	display: block;
+	padding: 15px;
+	text-decoration: none;
+	color: #aaa;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin: 0 10px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+	transition: all .5s;
+}
+
+nav ul li a:hover {
+	color: #555;
+}
+
+/* By Dominik Biedebach @domobch */
+
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+	position: relative;
+}
+
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 0%;
+	content: '.';
+	color: transparent;
+	background: #333;
+	height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+	width: 100%;
+}
+
+nav.fill ul li a {
+	transition: all 2s;
+}
+
+/* By Dominik Biedebach @domobch */
+
+nav.fill ul li a:after {
+	text-align: left;
+	content: '.';
+	margin: 0;
+	opacity: 0;
+}
+
+nav.fill ul li a:hover {
+	color: #023f1c;
+	z-index: 1;
+}
+
+nav.fill ul li a:hover:after {
+	z-index: -10;
+	animation: fill 1s forwards;
+	-webkit-animation: fill 1s forwards;
+	-moz-animation: fill 1s forwards;
+	opacity: 1;
+}
+
+/* Circle */
+nav.circle ul li a {
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+}
+
+/* By Dominik Biedebach @domobch */
+nav.circle ul li a:after {
+	display: block;
+	position: absolute;
+	margin: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	content: '.';
+	color: transparent;
+	width: 1px;
+	height: 1px;
+	border-radius: 50%;
+	background: transparent;
+}
+
+nav.circle ul li a:hover:after {
+	-webkit-animation: circle 1.5s ease-in forwards;
+}
+
+/* SHIFT */
+nav.shift ul li a {
+	position: relative;
+	z-index: 1;
+}
+
+nav.shift ul li a:hover {
+	color: #91640F;
+}
+
+nav.shift ul li a:after {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 1px;
+	content: '.';
+	color: transparent;
+	background: #F1C40F;
+	visibility: none;
+	opacity: 0;
+	z-index: -1;
+}
+
+nav.shift ul li a:hover:after {
+	opacity: 1;
+	visibility: visible;
+	height: 100%;
+}
+
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+/**************************************************************************************************************/
+
+/* Menu */
+
+.nav-pills .nav-link {
+	font-weight: bold;
+}
+
+ul {
+	list-style-type: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden !important;
+	border: 1px solid #C7C5F4 !important;
+	background-color: #C7C5F4 !important;
+}
+
+li button {
+	display: block !important;
+	color: #666 !important;
+	text-align: center !important;
+	padding: 14px 16px !important;
+	text-decoration: none !important;
+}
+
+li button:hover:not(.active) {
+	background-color: #ddd !important;
+}
+
+li button.active {
+	color: white !important;
+	background-color: #776BCC !important;
+}
+
+
+/**************************************************************************************************************/
+
+.nombreUsuario {
+	color: #776BCC;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.nombreUsuario2 {
+	text-align: right;
+	padding: 0;
+}
+
+.imgUsuario {
+	text-align: center;
+	padding: 0;
+}
+
+/************************************************************************************************************/
+
+/* Tabla */
+.tdTitulo {
+	background: #776BCC !important;
+	color: #fff;
+	font-weight: bold;
+}
+
+/************************************************************************************************************/
+
+/* carousel */
+
+.textoCarrusel {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.bordeFondo {
+	box-shadow: 0 0 8px 8px white inset;
+	border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	-webkit-border-radius: 20px 20px 20px 20px;
+	opacity: 0.6 !important;
+}
+
+
+/***********************************************************************************************************/
+
+/* Contactenos */
+
+.contact {
+	padding: 4%;
+	height: 400px;
+}
+
+.contenidoContact {
+	background: #776BCC;
+	padding: 4%;
+	border-top-left-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+}
+
+.contact-info {
+	margin-top: 10%;
+}
+
+.contact-info img {
+	margin-bottom: 15%;
+}
+
+.contact-info h2 {
+	margin-bottom: 10%;
+}
+
+.contenidoContact2 {
+	background: #fff;
+	padding: 3%;
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+	opacity: 0.7;
+}
+
+.contact-form label {
+	font-weight: 600;
+}
+
+.contact-form button {
+	background: #25274d;
+	color: #fff;
+	font-weight: 600;
+	width: 25%;
+}
+
+.contact-form button:focus {
+	box-shadow: none;
+}
